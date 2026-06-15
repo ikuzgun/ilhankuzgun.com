@@ -1,29 +1,242 @@
 <!DOCTYPE html>
-
-<html lang="en">
-
+<html lang="tr" class="scroll-smooth">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İlhan Kuzgun | Teknoloji Lideri & Girişimci</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <meta charset="UTF-8" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            500: '#14b8a6', // Teal color for a modern tech vibe
+                            600: '#0d9488',
+                            900: '#134e4a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        /* Custom styles for scroll animations */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
-  <title>İlhan Kuzgun</title>
+        /* Subtle gradient background for the whole page */
+        body {
+            background: linear-gradient(to bottom right, #f8fafc, #f1f5f9, #ffffff);
+            min-height: 100vh;
+        }
 
+        /* Image styling for word cloud replacement */
+        .logo-img {
+            max-height: 40px;
+            width: auto;
+            object-fit: contain;
+        }
+        
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border: 4px solid white;
+        }
+    </style>
 </head>
+<body class="text-slate-800 antialiased selection:bg-brand-500 selection:text-white">
 
-<body>
+    <main class="max-w-3xl mx-auto px-6 py-16 md:py-24">
+        
+        <section class="fade-in-up flex flex-col items-center md:items-start text-center md:text-left mb-20">
+            <!-- Profile Image (Replace src with your actual image URL) -->
+            <div class="relative mb-6 shadow-xl rounded-full">
+                <img src="ilhan kuzgun.png" alt="İlhan Kuzgun" class="profile-img rounded-full shadow-lg">
+            </div>
+            
+            <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 mb-4">
+                İlhan Kuzgun
+            </h1>
+            <p class="text-xl md:text-2xl text-slate-600 font-light mb-6">
+                Teknoloji Lideri, Ürün Yöneticisi & Girişimci
+            </p>
+            <p class="text-slate-500 leading-relaxed max-w-2xl text-lg">
+                22 yılı aşkın süredir teknoloji, e-ticaret ve FinTech ekosistemlerinde ölçeklenebilir ürünler geliştiriyorum. Sadece kod veya ürün inşa etmiyor; doğru ekipler kurarak, vizyonu olan işleri büyütmeye odaklanıyorum.
+            </p>
+        </section>
 
-  <h1>İlhan Kuzgun</h1>
+        <section class="fade-in-up mb-20">
+            <h2 class="text-sm font-semibold tracking-widest text-brand-600 uppercase mb-6">Şu An Ne Yapıyorum?</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Bitpace Card -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                    <div class="h-12 flex items-center justify-start mb-6">
+                         <img src="bitpace_logo.png" alt="Bitpace Logo" class="logo-img">
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Bitpace</h3>
+                    <p class="text-sm text-slate-500 font-medium mb-4">Head of Product • Son 4 Yıl</p>
+                    <p class="text-slate-600 leading-relaxed text-sm">
+                        Kripto ödeme sistemleri ve FinTech alanında ürün stratejilerine liderlik ediyorum. B2B ve B2C platformlarının global ölçekte büyüme süreçlerini yönetiyorum.
+                    </p>
+                </div>
 
-  <p>Startups, product management, fintech, payments and digital platforms.</p>
+                <!-- Egasidan Card -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                    <div class="h-12 flex items-center justify-start mb-6">
+                        <img src="egasidan_logo.png" alt="Egasidan Logo" class="logo-img">
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Egasidan.com</h3>
+                    <p class="text-sm text-slate-500 font-medium mb-4">Kurucu Ortak • Özbekistan</p>
+                    <p class="text-slate-600 leading-relaxed text-sm">
+                        Özbekistan pazarında faaliyet gösteren dijital girişimimizin kurucu ortaklarından biri olarak pazar büyümesi ve teknoloji altyapısına yön veriyorum.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-  <p>
+        <section class="fade-in-up mb-20">
+            <h2 class="text-sm font-semibold tracking-widest text-brand-600 uppercase mb-6">Odak Noktalarım & Uzmanlık</h2>
+            
+            <div class="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-slate-100 flex flex-wrap justify-center items-center gap-x-6 gap-y-4 text-center">
+                <span class="text-3xl font-bold text-slate-800 opacity-90 hover:text-brand-500 transition-colors cursor-default">FinTech</span>
+                <span class="text-xl font-medium text-brand-600 cursor-default">Ürün Yönetimi</span>
+                <span class="text-2xl font-semibold text-slate-700 opacity-80 hover:text-brand-500 transition-colors cursor-default">Kripto Ödemeler</span>
+                <span class="text-lg text-slate-500 cursor-default">B2B SaaS</span>
+                <span class="text-2xl font-bold text-brand-500 cursor-default">E-ticaret</span>
+                <span class="text-xl text-slate-800 opacity-70 hover:text-brand-500 transition-colors cursor-default">Özbekistan Pazarı</span>
+                <span class="text-lg font-medium text-slate-600 cursor-default">Start-up Büyüme</span>
+                <span class="text-3xl font-bold text-slate-900 hover:text-brand-500 transition-colors cursor-default">Veri Analitiği</span>
+                <span class="text-md text-brand-600 cursor-default">Agile Yönetim</span>
+                <span class="text-2xl font-semibold text-slate-700 opacity-90 hover:text-brand-500 transition-colors cursor-default">Ölçeklendirme</span>
+                <span class="text-xl text-slate-500 cursor-default">Blockchain</span>
+                <span class="text-lg font-bold text-slate-800 opacity-80 hover:text-brand-500 transition-colors cursor-default">Dijital Dönüşüm</span>
+            </div>
+        </section>
 
-   Check my profile  <a href="https://www.linkedin.com/in/ilhankuzgun">LinkedIn</a>
+        <section class="fade-in-up mb-20">
+            <h2 class="text-sm font-semibold tracking-widest text-brand-600 uppercase mb-6">Aile & Desteklediğim Projeler</h2>
+            
+            <div class="bg-slate-900 text-white p-8 md:p-10 rounded-3xl relative overflow-hidden">
+                <!-- Decorative background blob -->
+                <div class="absolute -top-24 -right-24 w-64 h-64 bg-brand-600 rounded-full mix-blend-multiply filter blur-3xl opacity-50"></div>
+                
+                <div class="relative z-10">
+                    <h3 class="text-2xl font-bold mb-4">Ghost to Guest Enstitüsü</h3>
+                    <p class="text-slate-300 mb-6 leading-relaxed">
+                        Eşim <strong>Tubanur Bayram Kuzgun</strong> öncülüğünde kurulan ve benim de destekçisi olduğum bu enstitü, insanı ağırlama ve misafirperverlik sanatını akademik ve pratik bir vizyonla yeniden tanımlıyor.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-4">
+                        <a href="https://drkuzgun.com" target="_blank" class="inline-flex items-center text-sm font-medium hover:text-brand-100 transition-colors bg-white/10 px-4 py-2 rounded-lg">
+                            <i class="fa-solid fa-globe mr-2"></i> drkuzgun.com
+                        </a>
+                        <a href="https://www.youtube.com/@GhosttoGuest" target="_blank" class="inline-flex items-center text-sm font-medium hover:text-red-400 transition-colors bg-white/10 px-4 py-2 rounded-lg">
+                            <i class="fa-brands fa-youtube mr-2"></i> YouTube Kanalı
+                        </a>
+                        <a href="https://www.instagram.com/p/DGAwYkMNMyB/" target="_blank" class="inline-flex items-center text-sm font-medium hover:text-pink-400 transition-colors bg-white/10 px-4 py-2 rounded-lg">
+                            <i class="fa-brands fa-instagram mr-2"></i> Instagram
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  </p>
+        <section class="fade-in-up mb-20">
+            <h2 class="text-sm font-semibold tracking-widest text-brand-600 uppercase mb-6">Ekrandan Uzakta</h2>
+            <div class="prose prose-slate max-w-none text-slate-600 leading-relaxed">
+                <p>
+                    Hayat sadece veri analizleri, API entegrasyonları ve ürün yol haritalarından ibaret değil. Dijital dünyadan fırsat buldukça ilgilendiğim ve değer verdiğim alanlar:
+                </p>
+                <ul class="mt-6 flex flex-wrap gap-3 list-none pl-0">
+                    <li class="bg-white border border-slate-200 shadow-sm px-5 py-2.5 rounded-full text-slate-700 text-sm font-medium flex items-center hover:border-brand-300 transition-colors">
+                        <i class="fa-solid fa-child-reaching text-brand-500 mr-2.5"></i> 11 yaşında harika bir oğul babası
+                    </li>
+                    <li class="bg-white border border-slate-200 shadow-sm px-5 py-2.5 rounded-full text-slate-700 text-sm font-medium flex items-center hover:border-brand-300 transition-colors">
+                        <i class="fa-solid fa-tree text-brand-500 mr-2.5"></i> Doğa & Tarım (Samsun'daki aile çiftliğimizde Ceviz/Fındık)
+                    </li>
+                    <li class="bg-white border border-slate-200 shadow-sm px-5 py-2.5 rounded-full text-slate-700 text-sm font-medium flex items-center hover:border-brand-300 transition-colors">
+                        <i class="fa-solid fa-chess-knight text-brand-500 mr-2.5"></i> Satranç
+                    </li>
+                    <li class="bg-white border border-slate-200 shadow-sm px-5 py-2.5 rounded-full text-slate-700 text-sm font-medium flex items-center hover:border-brand-300 transition-colors">
+                        <i class="fa-solid fa-people-group text-brand-500 mr-2.5"></i> Sivil Toplum (Kafkas-Çerkes Dernekleri)
+                    </li>
+                </ul>
+            </div>
+        </section>
 
+        <footer class="fade-in-up border-t border-slate-200 pt-12 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="https://www.linkedin.com/in/ilhankuzgun/" target="_blank" rel="noopener noreferrer" 
+                   class="bg-[#0A66C2] text-white px-6 py-3 rounded-full font-medium hover:bg-[#084e96] transition-colors shadow-sm hover:shadow flex items-center">
+                    <i class="fa-brands fa-linkedin text-xl mr-2"></i> LinkedIn'de Bağlan
+                </a>
+                <a href="mailto:ikuzgun@gmail.com" 
+                   class="bg-white text-slate-700 border border-slate-300 px-6 py-3 rounded-full font-medium hover:bg-slate-50 transition-colors shadow-sm hover:shadow flex items-center">
+                    <i class="fa-solid fa-envelope text-lg mr-2"></i> İletişime Geç
+                </a>
+            </div>
+            
+            <p class="text-sm text-slate-500">
+                &copy; <span id="current-year"></span> İlhan Kuzgun.
+            </p>
+        </footer>
+
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set current year in footer
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            // Intersection Observer for scroll animations
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target); // Stop observing once it's visible
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all elements with 'fade-in-up' class
+            document.querySelectorAll('.fade-in-up').forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
 </body>
-
 </html>
